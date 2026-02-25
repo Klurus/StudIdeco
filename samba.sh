@@ -19,7 +19,7 @@ samba-tool user add user$i.it P@ssword;
 samba-tool user setexpiry user$i.it --noexpiry; 
 samba-tool group addmembers "it" user$i.it;
 done
-for in {1..30};
+for i in {1..30};
 do
 samba-tool user add user$i.sales P@ssword;
 samba-tool user setexpiry user$i.sales --noexpiry; 
