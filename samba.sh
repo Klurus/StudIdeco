@@ -13,7 +13,7 @@ cp /var/lib/samba/private/krb5.conf /etc/krb5.conf
 systemctl enable --now samba 
 samba-tool group add IT 
 samba-tool group add Sales
-for i in (1..30};
+for i in {1..30};
 do
 samba-tool user add user$i.it P@ssword;
 samba-tool user setexpiry user$i.it --noexpiry; 
